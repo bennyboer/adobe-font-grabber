@@ -1,0 +1,9 @@
+[package]
+name = "adobe-font-grabber"
+version = "0.1.0"
+edition = "2018"
+authors = ["Benjamin Eder <barny.eder@gmail.com>"]
+
+[dependencies]
+font = { git = "https://github.com/pdf-rs/font" }
+xml-rs = "0.8.4"
