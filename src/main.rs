@@ -61,9 +61,17 @@ fn main() -> std::io::Result<()> {
                 _ => panic!("Font type is not supported yet"),
             };
 
-            let target_file_path = target_dir.join(family_name).join(target_name);
+            let target_file_path = target_dir.join(family_name.trim()).join(target_name.trim());
             fs::create_dir_all(target_file_path.parent().unwrap()).unwrap();
-            fs::copy(file_path.as_path(), target_file_path).expect("Could not copy font file");
+            fs::copy(file_path.as_path(), target_file_path.as_path()).unwrap_or_else(|err| {
+                println!(
+                    "[WARNING] Could not copy font file from '{}' to '{}' due to '{}'",
+                    file_path.as_path().display(),
+                    target_file_path.as_path().display(),
+                    err
+                );
+                0
+            });
 
             copied_fonts_counter += 1;
         }
