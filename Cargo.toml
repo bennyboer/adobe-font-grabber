@@ -1,9 +1,10 @@
 [package]
-name = "adobe-font-grabber"
-version = "0.1.1"
+name = "afg"
+version = "0.1.2"
 edition = "2018"
-authors = ["Benjamin Eder <barny.eder@gmail.com>"]
+authors = ["Benjamin Eder <barny.eder@gmail.com>", "N8VENTURES <n8ventures@gmail.com>"]
 
 [dependencies]
 font = { git = "https://github.com/pdf-rs/font" }
 xml-rs = "0.8.4"
+app_dirs = { package = "app_dirs2", version = "2.5" }
