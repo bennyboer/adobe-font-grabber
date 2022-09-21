@@ -1,5 +1,5 @@
 [package]
-name = "afg"
+name = "adode-font-grabber"
 version = "0.1.2"
 edition = "2018"
 authors = ["Benjamin Eder <barny.eder@gmail.com>", "N8VENTURES <n8ventures@gmail.com>"]
