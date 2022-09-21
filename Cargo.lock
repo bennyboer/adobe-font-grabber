@@ -3,7 +3,7 @@
 version = 3
 
 [[package]]
-name = "adode-font-grabber"
+name = "adobe-font-grabber"
 version = "0.1.2"
 dependencies = [
  "app_dirs2",
