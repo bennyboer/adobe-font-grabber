@@ -2,6 +2,10 @@
 
 Tool to copy all fonts installed via Adobe CC to a folder of your choice.
 
+## What's New?
+
+Hard-coded the data directory (`%appdata%` for Windows, `$HOME/Library/Application Support` for MacOS) to the program so you only need to put one argument which is specifically the save location of the fonts.
+
 ## Download
 
 You can download a pre-built binary for 64-bit Windows on the GitHub releases page under "Assets": https://github.com/bennyboer/adobe-font-grabber/releases
@@ -12,7 +16,7 @@ If you do not use Windows you will have to built your own binary (See [Building]
 Use the tool on your command line as follows:
 
 ```sh
-./adobe-font-grabber <FOLDER TO SEARCH FOR FONTS IN> <PATH TO THE ENTITLEMENTS XML FILE> <FOLDER TO COPY FONTS TO>
+./adobe-font-grabber "<FOLDER TO COPY FONTS TO>"
 ```
 
 ## Example
@@ -23,7 +27,7 @@ fonts are located in is something like `<HOME>/Library/Application/Support/Adobe
 ### Windows
 
 ```sh
-./adobe-font-grabber.exe "C:/Users/<USERNAME>/AppData/Roaming/Adobe/CoreSync/plugins/livetype" "C:/Users/<USERNAME>/AppData/Roaming/Adobe/CoreSync/plugins/livetype/c/entitlements.xml" "C:/Users/<USERNAME>/Downloads/ADOBE_FONTS"
+./adobe-font-grabber.exe "C:/Users/<USERNAME>/Downloads/ADOBE_FONTS"
 ```
 
 If everything went as planned the following message should appear once done:
